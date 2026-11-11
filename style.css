@@ -816,3 +816,387 @@ a {
     opacity: 0.65;
     cursor: not-allowed;
 }
+
+
+/* =========================================
+   11. BLACK CHERRY GLASS REFINEMENT
+========================================= */
+
+/* LOGO */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo-mark {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(214, 185, 140, 0.55);
+    border-radius: 12px;
+    background: linear-gradient(
+        145deg,
+        rgba(214, 185, 140, 0.15),
+        rgba(80, 27, 48, 0.25)
+    );
+    color: var(--champagne);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16);
+}
+
+.logo-name {
+    color: var(--ivory);
+}
+
+.logo-dot {
+    color: var(--champagne);
+}
+
+/* FLOATING GLASS NAVIGATION */
+
+.navbar {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    max-width: 1180px;
+    padding: 13px 25px;
+
+    border: 1px solid rgba(214, 185, 140, 0.19);
+    border-radius: 18px;
+
+    background: rgba(34, 7, 9, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.nav-links a {
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.nav-links .nav-contact {
+    border-radius: 8px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.nav-links .nav-contact:hover {
+    background: rgba(214, 185, 140, 0.12);
+    border-color: var(--champagne);
+}
+
+/* SUBTLE BACKGROUND LIGHTING */
+
+body {
+    background:
+        radial-gradient(
+            circle at 12% 28%,
+            rgba(112, 43, 67, 0.13),
+            transparent 30%
+        ),
+        var(--burgundy-dark);
+}
+
+.hero {
+    background:
+        radial-gradient(
+            ellipse at 82% 42%,
+            rgba(152, 91, 93, 0.20),
+            transparent 42%
+        ),
+        radial-gradient(
+            ellipse at 12% 85%,
+            rgba(82, 23, 28, 0.35),
+            transparent 42%
+        ),
+        linear-gradient(
+            120deg,
+            var(--burgundy-dark),
+            var(--burgundy)
+        );
+}
+
+/* GLASS HERO MONOGRAM */
+
+.monogram {
+    background: rgba(54, 15, 18, 0.48);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(214, 185, 140, 0.38);
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.orbit-one {
+    border-color: rgba(214, 185, 140, 0.20);
+}
+
+.orbit-two {
+    border-color: rgba(214, 185, 140, 0.32);
+}
+
+/* GLASS SKILL CARDS */
+
+.skill-card {
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(80, 27, 48, 0.20);
+    border: 1px solid rgba(214, 185, 140, 0.16);
+    border-radius: 12px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(214, 185, 140, 0.55);
+    background: rgba(80, 27, 48, 0.34);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.20);
+}
+
+/* GLASS PROJECT CARDS */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(82, 23, 28, 0.55),
+        rgba(34, 7, 9, 0.60)
+    );
+
+    border: 1px solid rgba(214, 185, 140, 0.17);
+    border-radius: 12px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.13);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(214, 185, 140, 0.55);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.24);
+}
+
+.project-tags span {
+    border-radius: 5px;
+    background: rgba(214, 185, 140, 0.045);
+}
+
+/* CONTACT FORM GLASS DETAILS */
+
+.form-group input,
+.form-group textarea {
+    background: rgba(82, 23, 28, 0.38);
+    border-color: rgba(214, 185, 140, 0.20);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    background: rgba(82, 23, 28, 0.58);
+    border-color: var(--champagne);
+    box-shadow: 0 0 0 3px rgba(214, 185, 140, 0.08);
+}
+
+.contact-submit {
+    border-radius: 8px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-submit:hover {
+    box-shadow: 0 8px 25px rgba(214, 185, 140, 0.16);
+}
+
+/* BUTTON REFINEMENT */
+
+.button {
+    border-radius: 7px;
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+/* SECTION SPACING AND DETAIL */
+
+.section-heading h2 {
+    letter-spacing: -1px;
+}
+
+.eyebrow {
+    letter-spacing: 3px;
+}
+
+.footer {
+    background: rgba(34, 7, 9, 0.45);
+}
+
+/* =========================================
+   12. SCROLL REVEAL ANIMATIONS
+========================================= */
+
+html.js-motion .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+html.js-motion .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gentle stagger for card grids */
+
+.skills-grid .skill-card:nth-child(2),
+.projects-grid .project-card:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.skills-grid .skill-card:nth-child(3) {
+    transition-delay: 180ms;
+}
+
+.skills-grid .skill-card:nth-child(4) {
+    transition-delay: 260ms;
+}
+
+/* HERO ENTRANCE */
+
+.hero-content {
+    animation: heroEnter 0.9s ease both;
+}
+
+.hero-decoration {
+    animation: heroEnter 1.1s ease both;
+}
+
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACCESSIBILITY: REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html.js-motion .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* RESPONSIVE NAVIGATION AND GLASS ELEMENTS */
+
+@media (max-width: 650px) {
+    .navbar {
+        top: 10px;
+        width: calc(100% - 24px);
+        padding: 12px 14px;
+        border-radius: 13px;
+        gap: 12px;
+    }
+
+    .logo {
+        gap: 7px;
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+    }
+
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 9px;
+    }
+
+    .nav-links a {
+        font-size: 0.62rem;
+    }
+
+    .nav-links .nav-contact {
+        padding: 5px 8px;
+    }
+
+    .project-card,
+    .skill-card {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+

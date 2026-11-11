@@ -59,3 +59,48 @@ if (contactForm && submitButton && contactStatus) {
         }
     });
 }
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+========================================= */
+
+document.documentElement.classList.add("js-motion");
+
+const revealElements = document.querySelectorAll(`
+    .hero-footer,
+    .section-heading,
+    .about-content,
+    .skill-card,
+    .project-card,
+    .contact-form,
+    .footer > *
+`);
+
+revealElements.forEach((element) => {
+    element.classList.add("reveal");
+});
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -35px 0px"
+        }
+    );
+
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+} else {
+    revealElements.forEach((element) => {
+        element.classList.add("is-visible");
+    });
+}
