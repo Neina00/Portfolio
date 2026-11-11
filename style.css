@@ -1200,3 +1200,44 @@ html.js-motion .reveal.is-visible {
     }
 }
 
+/* =========================================
+   PROJECT LINKS
+========================================= */
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    width: fit-content;
+    margin-top: 24px;
+    padding-bottom: 5px;
+
+    color: #D6B98C;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(214, 185, 140, 0.45);
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.project-link:hover {
+    color: #F5EDE5;
+    border-color: #F5EDE5;
+    gap: 12px;
+}
+
+.project-link span {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover span {
+    transform: translate(2px, -2px);
+}
+
